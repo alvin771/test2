@@ -1,0 +1,16 @@
+{
+  "builds": [
+    {
+      "src": "/",
+      "use": "@vercel/node",
+      "config": {
+        "maxLambdaSize": "2048mb",
+        "includeFiles": ["prisma/**/*"]
+      },
+      "env": {
+        "PRISMA_GENERATE_BEFORE_BUILD": "true"
+      }
+    }
+  ],
+  "routes": []
+}
